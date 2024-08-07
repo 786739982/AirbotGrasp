@@ -19,3 +19,4 @@ dataset/tolerance
 *.png
 checkpoint/
 TestCloud/
+GraspNet/graspnetAPI
