@@ -22,7 +22,7 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
 
 <p align="center">
   <a href="https://github.com/786739982/AirbotGrasp/">
-    <img src="images/logo.png" alt="Logo" width="146" height="64">
+    <img src="assets/logo.png" alt="Logo" width="146" height="64">
   </a>
 
   <h3 align="center">AirbotGrasp</h3>
