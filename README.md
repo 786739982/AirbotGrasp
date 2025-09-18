@@ -42,10 +42,7 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
 </p>
 
 <p align="center">
-<video width="30%" height="auto" controls autoplay loop muted>
-  <source src="assets/airbotgrasp.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img src="assets/airbotgrasp.gif", width="300"/>
 </p>
 
 ## 目录
