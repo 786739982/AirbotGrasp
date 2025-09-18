@@ -52,8 +52,8 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
   - [Deployment](#Deployment)
 - [Directory-Structure](#Directory-Structure)
 - [Customization-Guide](#Customization-Guide)
-  - [Add a New Vision Algorithm]
-  - [Integrate Your Own Robotic Arm]
+  - Add a New Vision Algorithm
+  - Integrate Your Own Robotic Arm
 - [Author](#Author)
 - [Acknowledgements](#Acknowledgements)
 
