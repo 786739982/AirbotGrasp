@@ -37,8 +37,7 @@ class AirbotInterface(QWidget):
         if self.type_predictor == 'SAM':
             Predictor = AirbotSegment()
             self.predictor = Predictor.get_model()
-        elif self.type_predictor == 'Yolo-World':
-            # TODO
+        elif self.type_predictor == 'Yolo-World': # You can use your own predictor model
             pass
 
     def update_image(self, image):

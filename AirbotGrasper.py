@@ -64,6 +64,7 @@ class AirbotGrasper(object):
         print("[%s]Init Gripper Robot......" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         self.translations_list = [0.24795357914631247, -0.000333295809713752, 0.23000896578243882]
         self.rotations_list = [0.03907312406344713, 0.604864292787, -0.023462915064072824, 0.7950232511718768]
+        # You can use your own robot
         self.bot = airbot.create_agent("down", "can0", 1.0, "gripper", 'OD', 'DM')
 
         if not self.debug:
