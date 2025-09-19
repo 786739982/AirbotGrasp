@@ -50,10 +50,12 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
   - [Requirements](#Requirements)
   - [Installation](#Installation)
   - [Deployment](#Deployment)
-- [Directory-Structure](#Directory-Structure)
 - [Customization-Guide](#Customization-Guide)
   - Add a New Vision Algorithm
+  - Set the matrix of the camera relative to the robotic arm end-effector.
   - Integrate Your Own Robotic Arm
+  - Integrate Your Own RGBD-Camera
+- [Directory-Structure](#Directory-Structure)
 - [Author](#Author)
 - [Acknowledgements](#Acknowledgements)
 
