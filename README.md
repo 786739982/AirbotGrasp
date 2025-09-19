@@ -107,13 +107,62 @@ Hardware
 
 通过手眼标定获得相机相对于机械臂末端的旋转矩阵，并替换 ```AirbotGrasper.py``` 中的代码：
 ```
-  self.translations_list = [0.24795357914631247, -0.000333295809713752, 0.23000896578243882]
-  self.rotations_list = [0.03907312406344713, 0.604864292787, -0.023462915064072824, 0.7950232511718768]
+  Tmat_end2cam = np.array([
+            [0.01679974372021955, -0.3417827195107749, 0.9396288316429802, -0.1205800830169818],
+            [-0.9988576340892403, -0.04778282400951217, 0.0004780703983183782, 0.003676703639963586],
+            [0.04473472289580515, -0.9385634631571248, -0.3421950177807104, 0.1103012524056419], 
+            [0,         0,        0,             1]
+        ])
 ```
 
 Run the Pipeline.
 ```
   python3 Pipeline.py
+```
+
+
+
+
+### Customization-Guide
+
+#### Add a New Vision Algorithm
+添加新的视觉算法类似于 ```AirbotSegment.py``` ，并修改 ```AirbotInterface.py``` 中的代码：
+```
+  def init_predictor(self):
+        if self.type_predictor == 'SAM':
+            Predictor = AirbotSegment()
+            self.predictor = Predictor.get_model()
+        elif self.type_predictor == 'Yolo-World': # You can use your own predictor model
+            pass
+```
+
+#### Set the matrix of the camera relative to the robotic arm end-effector.
+通过手眼标定获得相机相对于机械臂末端的旋转矩阵，并替换 ```AirbotGrasper.py``` 中的代码：
+```
+  Tmat_end2cam = np.array([
+            [0.01679974372021955, -0.3417827195107749, 0.9396288316429802, -0.1205800830169818],
+            [-0.9988576340892403, -0.04778282400951217, 0.0004780703983183782, 0.003676703639963586],
+            [0.04473472289580515, -0.9385634631571248, -0.3421950177807104, 0.1103012524056419], 
+            [0,         0,        0,             1]
+        ])
+```
+
+#### Integrate Your Own Robotic Arm
+添加新的机械臂，并修改 ```AirbotGrasper.py``` 中的代码：
+```
+  # You can use your own robot
+  self.bot = airbot.create_agent("down", "can0", 1.0, "gripper", 'OD', 'DM') 
+```
+
+#### Integrate Your Own RGBD-Camera
+
+```
+  def get_image_and_depth(self):
+      '''
+          Read color and depth image from stream.
+          Depth is align to color image.
+      '''
+      pass
 ```
 
 
@@ -140,27 +189,6 @@ filetree
 ```
 
 
-
-
-### Customization-Guide
-
-#### Add a New Vision Algorithm
-添加新的视觉算法类似于 ```AirbotSegment.py``` ，并修改 ```AirbotInterface.py``` 中的代码：
-```
-  def init_predictor(self):
-        if self.type_predictor == 'SAM':
-            Predictor = AirbotSegment()
-            self.predictor = Predictor.get_model()
-        elif self.type_predictor == 'Yolo-World': # You can use your own predictor model
-            pass
-```
-
-#### Integrate Your Own Robotic Arm
-添加新的机械臂，并修改 ```AirbotGrasper.py``` 中的代码：
-```
-  # You can use your own robot
-  self.bot = airbot.create_agent("down", "can0", 1.0, "gripper", 'OD', 'DM') 
-```
 
 
 ### Author
