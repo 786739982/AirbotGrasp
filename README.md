@@ -15,7 +15,6 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -173,15 +172,38 @@ E-Mail：786739982@qq.com or hongrui0226@gmail.com
 qq:786739982
 
 vx：Hong_Rui_0226
+
+
+
   
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/786739982/AirbotGrasp/blob/master/LICENSE.txt)
 
+
+
+
+
 ### Acknowledgements
 
-
 - [DISCOVERSE](https://airbots.online/)
+
+
+
+
+<!-- links -->
+[contributors-shield]: https://img.shields.io/github/contributors/786739982/AirbotGrasp.svg?style=flat-square
+[contributors-url]: https://github.com/786739982/AirbotGrasp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/786739982/AirbotGrasp.svg?style=flat-square
+[forks-url]: https://github.com/786739982/AirbotGrasp/network/members
+[stars-shield]: https://img.shields.io/github/stars/786739982/AirbotGrasp.svg?style=flat-square
+[stars-url]: https://github.com/786739982/AirbotGrasp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/786739982/AirbotGrasp.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/786739982/AirbotGrasp.svg
+[license-shield]: https://img.shields.io/github/license/786739982/AirbotGrasp.svg?style=flat-square
+[license-url]: https://github.com/786739982/AirbotGrasp/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+
 
 
 
