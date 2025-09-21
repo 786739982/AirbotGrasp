@@ -62,9 +62,9 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
 
 
 
-### Getting-Started
+## Getting-Started
 
-#### Requirements
+### Requirements
 
 1. Python 3
 2. PyTorch 2.6
@@ -72,7 +72,7 @@ Additionally, the framework provides a subjective evaluation tool for assessing 
 4. Open3d >=0.8
 5. TensorBoard 2.3
 
-#### **Installation**
+### **Installation**
 
 Get the code.
 ```bash
@@ -100,7 +100,7 @@ cd graspnetAPI
 pip install .
 ```
 
-#### Deployment
+### Deployment
 
 Hardware
 
@@ -125,9 +125,9 @@ Run the Pipeline.
 
 
 
-### Customization-Guide
+## Customization-Guide
 
-#### Add a New Vision Algorithm
+### Add a New Vision Algorithm
 添加新的视觉算法类似于 ```AirbotSegment.py``` ，并修改 ```AirbotInterface.py``` 中的代码：
 ```
   def init_predictor(self):
@@ -138,7 +138,7 @@ Run the Pipeline.
             pass
 ```
 
-#### Set the matrix of the camera relative to the robotic arm end-effector.
+### Set the matrix of the camera relative to the robotic arm end-effector.
 通过手眼标定获得相机相对于机械臂末端的旋转矩阵，并替换 ```AirbotGrasper.py``` 中的代码：
 ```
   Tmat_end2cam = np.array([
@@ -149,14 +149,14 @@ Run the Pipeline.
         ])
 ```
 
-#### Integrate Your Own Robotic Arm
+### Integrate Your Own Robotic Arm
 添加新的机械臂，并修改 ```AirbotGrasper.py``` 中的代码：
 ```
   # You can use your own robot
   self.bot = airbot.create_agent("down", "can0", 1.0, "gripper", 'OD', 'DM') 
 ```
 
-#### Integrate Your Own RGBD-Camera
+### Integrate Your Own RGBD-Camera
 
 ```
   def get_image_and_depth(self):
@@ -169,8 +169,7 @@ Run the Pipeline.
 
 
 
-### Directory-Structure
-eg:
+## Directory-Structure
 
 ```
 filetree 
@@ -193,7 +192,7 @@ filetree
 
 
 
-### Author
+## Author
 
 Hongrui Zhu 
 
@@ -206,7 +205,7 @@ vx：Hong_Rui_0226
 
 
   
-### 版权说明
+## 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/786739982/AirbotGrasp/blob/master/LICENSE.txt)
 
@@ -214,7 +213,7 @@ vx：Hong_Rui_0226
 
 
 
-### Acknowledgements
+## Acknowledgements
 
 - [DISCOVERSE](https://airbots.online/)
 
